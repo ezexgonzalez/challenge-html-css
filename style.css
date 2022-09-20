@@ -1,0 +1,226 @@
+body {
+    background-color: #EEEEEE;
+    font-family: 'Exo 2', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+.mainContainer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+
+.news {
+    display: flex;
+    flex-direction: column;
+    max-width: 1408px;
+    width: 100%;
+}
+
+
+.title {
+    /* H2 portada */
+    font-style: normal;
+    font-weight: 500;
+    font-size: 36px;
+    line-height: 36px;
+    /* identical to box height, or 100% */
+    text-align: center;
+
+    color: #000000;
+
+    mix-blend-mode: normal;
+    margin-top: 65px;
+    margin-bottom: 52px;
+}
+
+
+.gridContainer {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    grid-column-gap: 32px;
+    grid-row-gap: 32px;
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    background-color: #FFFFFF;
+    width: 448px;
+    height: 637px;
+    padding: 8px 16px 16px 16px;
+    cursor: pointer;
+}
+
+.date {
+    /* 20 abril 2022 */
+    width: 84px;
+    height: 20px;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 140%;
+    /* Grayscale/90 */
+    color: #464646;
+    margin: 16px 0px;
+
+}
+
+.titleCard {
+    /* Lobortis egestas odio pharetra enim ut */
+
+    width: 410px;
+    min-height: 77px;
+
+    /* H2 post portada */
+    font-weight: 500;
+    font-size: 32px;
+    line-height: 38px;
+
+    /* Grayscale/100 */
+    color: #1A1A1A;
+
+}
+
+.buttonCard {
+    /* Auto layout */
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 4px 8px;
+    background: #DD2025;
+    font-family: 'Exo 2';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 140%;
+    border: none;
+    width: 122px;
+    height: 30px;
+    color: #FFFFFF;
+    cursor: pointer;
+    margin-bottom: 20px;
+}
+
+.buttonCard a {
+    text-decoration: none;
+    color: #FFFFFF;
+}
+
+.summary {
+    width: 410px;
+    min-height: 96px;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    color: #464646;
+    margin: 16px 0px;
+}
+
+.imgContainer{
+    overflow: hidden;
+    display: flex;
+    object-fit: cover;
+}
+
+.imageCard{
+    width: 100%;
+    transition: 0.2s;
+}
+.imageCard:hover{
+    transform: scale(1.2);
+}
+
+.author{
+    display: flex;
+    align-items: center;
+}
+
+.authorImage{
+    width: 60px;
+    height: 60px;
+    margin-right: 8px;
+    object-fit: cover;
+}
+
+.authorName{
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 140%;
+    color: #1A1A1A;
+    text-decoration: none;
+}
+
+.buttonMoreNews{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 32px 24px;
+    border: none;
+    width: 221px;
+    height: 60px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 80px;
+    margin-bottom: 51px;
+    background: #DD2025;
+    color: #FFFFFF;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 36px;
+    cursor: pointer;
+}
+
+.authorLink{
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+}
+
+
+@media screen and (max-width: 1408px) {
+       .gridContainer {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, 448px);
+    grid-template-rows: 1fr;
+    grid-column-gap: 10px;
+    grid-row-gap: 30px;
+    justify-content: center;
+    
+    } 
+}
+
+@media screen and (max-width: 490px) {
+    .card{
+        width: 100%;
+    }
+    .gridContainer{
+        width: 100%;
+        grid-column-gap: 0px;
+        grid-template-columns: repeat(auto-fill, 100%);
+    }
+    .titleCard{
+        width: 100%;
+       
+    }
+    .summary{
+        width: 100%;
+       
+    }
+}
